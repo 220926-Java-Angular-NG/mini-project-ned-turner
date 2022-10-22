@@ -15,6 +15,8 @@ public class User {
     public User() {
     }
 
+
+
     // login constructor
     public User(String firstname, String lastname, String username, String password, String zodiac) {
         this.firstname = firstname;
@@ -39,6 +41,12 @@ public class User {
     public User(int id) {
         this.id = id;
     }
+    public User(int id, String mood) {
+        this.id = id;
+        this.mood = mood;
+    }
+
+
 
 
     public int getId() {

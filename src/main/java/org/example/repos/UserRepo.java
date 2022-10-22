@@ -64,13 +64,13 @@ public class UserRepo implements CRUDDaoInterface<User> {
             User user = new User();
 
             while(rs.next()){
-                rs.getInt("id");
-                rs.getString("firstname");
-                rs.getString("lastname");
-                rs.getString("username");
-                rs.getString("pass_word");
-                rs.getString("zodiac");
-                rs.getString("mood");
+                user.setId(rs.getInt("id"));
+                user.setFirstname(rs.getString("firstname"));
+                user.setLastname(rs.getString("lastname"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("pass_word"));
+                user.setZodiac(rs.getString("zodiac"));
+                user.setMood(rs.getString("mood"));
             }
 
             return user;
@@ -95,13 +95,13 @@ public class UserRepo implements CRUDDaoInterface<User> {
             User user = new User();
 
             while(rs.next()){
-                rs.getInt("id");
-                rs.getString("firstname");
-                rs.getString("lastname");
-                rs.getString("username");
-                rs.getString("pass_word");
-                rs.getString("zodiac");
-                rs.getString("mood");
+                user.setId(rs.getInt("id"));
+                user.setFirstname(rs.getString("firstname"));
+                user.setLastname(rs.getString("lastname"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("pass_word"));
+                user.setZodiac(rs.getString("zodiac"));
+                user.setMood(rs.getString("mood"));
             }
 
             return user;
@@ -127,6 +127,12 @@ public class UserRepo implements CRUDDaoInterface<User> {
             ResultSet rs = pstmt.getGeneratedKeys();
 
             while(rs.next()){
+                user.setId(rs.getInt("id"));
+                user.setFirstname(rs.getString("firstname"));
+                user.setLastname(rs.getString("lastname"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("pass_word"));
+                user.setZodiac(rs.getString("zodiac"));
                 user.setMood(rs.getString("mood"));
             }
 
